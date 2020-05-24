@@ -7,68 +7,75 @@ import android.annotation.TargetApi;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.daandtu.webscraper.Element;
-import com.daandtu.webscraper.WebScraper;
+import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
+
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttp;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 
 public class MainActivity extends AppCompatActivity {
-    EditText searchCountry;
-    TextView infectedData;
+    public static TextView death;
+    public  static TextView infected;
+    public static TextView recovered;
+    public static TextView countryName;
+    public static TextView TotalDeath;
+    public static TextView Critical;
+    public static TextView TotalCase;
 
-
-
-
+    EditText getUrl;
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toast.makeText(this, "It Works", Toast.LENGTH_SHORT).show();
+        death = (TextView) findViewById(R.id.deathID);
+        getUrl = (EditText)findViewById(R.id.SearchCountry);
+        infected = (TextView)findViewById(R.id.infectedID);
+        recovered = (TextView)findViewById(R.id.RecoveryID);
+        countryName = (TextView)findViewById(R.id.CountryName);
+        TotalDeath = (TextView)findViewById(R.id.totalDeath);
+        Critical = (TextView)findViewById(R.id.CriticalCase);
+        TotalCase =(TextView)findViewById(R.id.TotalCase);
+
+    }
+    public void onClick(View view) {
+
+
+        url = getUrl.getText().toString();
+        if(url.length()==0){
+            death.setText("0");
+            infected.setText("0");
+            recovered.setText("0");
+            TotalDeath.setText("0");
+            TotalCase.setText("0");
+            Critical.setText("0");
+            Toast.makeText(this, "Please Enter A Country Name", Toast.LENGTH_SHORT).show();
+        }else {
+
+            fetchData data = new fetchData(url);
+            data.execute();
+        }
+
 
 
     }
 
-    public void searchCountry(String CountryName){
 
-
-
-    }
-
-
-
-    public void sayHi(View view) {
-      ConstraintLayout layout = new ConstraintLayout(this);
-
-        searchCountry = (EditText)findViewById(R.id.SearchCountry);
-        final String CountryName = searchCountry.getText().toString();
-        searchCountry(CountryName);
-        infectedData = (TextView)findViewById(R.id.infectedID);
-        final WebScraper webScraper = new WebScraper(this);
-        webScraper.setUserAgentToDesktop(true);
-        webScraper.setLoadImages(false);
-        webScraper.loadURL("https://www.worldometers.info/coronavirus/?utm_campaign=homeAdUOA?Si");
-        layout.addView(webScraper.getView());
-        webScraper.setOnPageLoadedListener(new WebScraper.onPageLoadedListener() {
-            @Override
-            public void loaded(String URL) {
-                //Element searchBar = webScraper.findElementByXpath("//*[@id=\"main_table_countries_today_filter\"]/label/input");
-                //searchBar.setText(CountryName);
-                Element getInfo = webScraper.findElementByXpath("//*[@id=\"maincounter-wrap\"]/div/span");
-                String infected = getInfo.getText();
-                Toast.makeText(MainActivity.this, infected, Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-
-
-
-    }
 }
