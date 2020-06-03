@@ -44,7 +44,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="19dp"
             android:layout_marginEnd="65dp"
-            android:text="Recovered" />
+            android:text="Recovered"
+            android:textSize="10dp"/>
 
         <TextView
             android:id="@+id/deathID"
@@ -57,10 +58,10 @@
             android:layout_marginTop="127dp"
             android:layout_marginEnd="123dp"
             android:fontFamily="sans-serif"
-            android:lineSpacingExtra="24sp"
+            android:lineSpacingExtra="20dp"
             android:text="0"
             android:textColor="#ff4848"
-            android:textSize="18sp" />
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/RecoveryID"
@@ -73,10 +74,10 @@
             android:layout_marginTop="127dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="sans-serif"
-            android:lineSpacingExtra="24sp"
+            android:lineSpacingExtra="20dp"
             android:text="0"
             android:textColor="#36c12c"
-            android:textSize="18sp" />
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/infectedText2"
@@ -86,7 +87,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="19dp"
             android:layout_marginEnd="160dp"
-            android:text="Today's Death" />
+            android:text="Today's Death"
+            android:textSize="10dp"/>
 
         <TextView
             android:id="@+id/infectedText"
@@ -96,7 +98,8 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="35dp"
             android:layout_marginTop="19dp"
-            android:text="Today's Infected" />
+            android:text="Today's Infected"
+            android:textSize="10dp"/>
 
         <TextView
             android:id="@+id/infectedID"
@@ -111,7 +114,7 @@
             android:fontFamily="sans-serif"
             android:text="0"
             android:textColor="#ff8748"
-            android:textSize="18sp" />
+            android:textSize="14dp" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -243,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="38dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="43dp"
             android:ems="10"
             android:gravity="center"
@@ -256,10 +259,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="5dp"
             android:layout_marginTop="249dp"
             android:layout_marginEnd="12dp"
-            android:layout_toEndOf="@+id/SearchCountry"
             android:background="#FAFAFAFA"
             android:onClick="onClick"
             app:srcCompat="@drawable/icons8_search_64" />
@@ -295,7 +296,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:text="Total Cases: "
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.458"
@@ -308,7 +309,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="0"
                     android:textColor="#ff0000"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -321,7 +322,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="72dp"
                     android:text="Total Death: "
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.737"
@@ -335,7 +336,7 @@
                     android:layout_marginBottom="72dp"
                     android:text="0"
                     android:textColor="#ff0000"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -348,7 +349,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="72dp"
                     android:text="Critical Cases: "
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.054"
@@ -362,7 +363,7 @@
                     android:layout_marginBottom="72dp"
                     android:text="0"
                     android:textColor="#ff0000"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -384,10 +385,21 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/headache" />
+
+                <ImageView
                     android:id="@+id/imageView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="28dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.834"
                     app:layout_constraintStart_toStartOf="parent"
@@ -395,22 +407,49 @@
                     app:srcCompat="@drawable/fever" />
 
                 <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cough"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.504"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fever"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.809"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Headache"
+                    android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.115"
+                    app:layout_constraintHorizontal_bias="0.114"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView13"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.2" />
 
                 <ImageView
                     android:id="@+id/imageView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="28dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.505"
                     app:layout_constraintStart_toStartOf="parent"
@@ -418,47 +457,12 @@
                     app:srcCompat="@drawable/cough" />
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cough"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.505"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView14"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fever"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.807"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView15"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.112"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/headache" />
-
-                <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Symptoms"
                     android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/imageView14"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -484,7 +488,7 @@
             android:layout_marginBottom="105dp"
             android:gravity="center"
             android:textColor="#F0000000"
-            android:textSize="30dp"
+            android:textSize="26dp"
             android:textStyle="bold"
             tools:ignore="UnknownId" />
 
