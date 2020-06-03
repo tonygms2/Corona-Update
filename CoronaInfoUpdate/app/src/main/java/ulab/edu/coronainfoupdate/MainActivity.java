@@ -1,9 +1,15 @@
 package ulab.edu.coronainfoupdate;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.net.Uri;
 
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Text;
@@ -38,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView TotalDeath;
     public static TextView Critical;
     public static TextView TotalCase;
+    private static final int REQUEST_CALL=1;
 
     EditText getUrl;
     String url;
@@ -78,4 +86,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_CALL){
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                makePhoneCall();
+            }
+        }
+    }
+
+    public void callNumber(View view) {
+        makePhoneCall();
+    }
+    public void makePhoneCall(){
+        String number;
+        number = "333";
+
+        if(ContextCompat.checkSelfPermission(MainActivity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else{
+            String dial = "tel:"+number;
+            startActivity(new Intent(Intent.ACTION_CALL,Uri.parse(dial)));
+        }
+    }
 }
