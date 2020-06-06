@@ -246,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="36dp"
             android:layout_marginTop="43dp"
             android:ems="10"
             android:gravity="center"
@@ -291,15 +291,41 @@
                 tools:layout_editor_absoluteY="0dp">
 
                 <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Total Test: "
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/TotalTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="0"
+                    android:textColor="#ff0000"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.426"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="Total Cases: "
+                    android:text="Total Case: "
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.458"
+                    app:layout_constraintHorizontal_bias="0.74"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -313,7 +339,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.759"
+                    app:layout_constraintHorizontal_bias="0.94"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -348,7 +374,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="72dp"
-                    android:text="Critical Cases: "
+                    android:text="Active Cases: "
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -357,7 +383,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/CriticalCase"
+                    android:id="@+id/TotalActiveCase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="72dp"
@@ -401,7 +427,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.834"
+                    app:layout_constraintHorizontal_bias="0.83"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/fever" />
@@ -466,7 +492,6 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/imageView14"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />

@@ -21,8 +21,9 @@ public class fetchData extends AsyncTask<Void,Void,Void>{
     String recovered = "";
     String Country= "";
     String TotalDeath = "";
-    String Critical = "";
+    String TotalActiveCase = "";
     String TotalCase = "";
+    String TotalTest = "";
     fetchData(String url){
         thisUrl = " https://coronavirus-19-api.herokuapp.com/countries/"+url;
         //System.out.println(thisUrl);
@@ -50,8 +51,9 @@ public class fetchData extends AsyncTask<Void,Void,Void>{
             recovered = JA.getString("recovered");
             Country = JA.getString("country");
             TotalDeath = JA.getString("deaths");
-            Critical = JA.getString("critical");
+            TotalActiveCase = JA.getString("active");
             TotalCase = JA.getString("cases");
+            TotalTest = JA.getString("totalTests");
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -72,8 +74,9 @@ public class fetchData extends AsyncTask<Void,Void,Void>{
         MainActivity.recovered.setText(this.recovered);
         MainActivity.countryName.setText(this.Country);
         MainActivity.TotalDeath.setText(this.TotalDeath);
-        MainActivity.Critical.setText(this.Critical);
+        MainActivity.TotalActiveCase.setText(this.TotalActiveCase);
         MainActivity.TotalCase.setText(this.TotalCase);
+        MainActivity.TotalTest.setText(this.TotalTest);
     }
 
 }
