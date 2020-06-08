@@ -54,14 +54,11 @@ public class MainActivity extends AppCompatActivity {
                 url = ccp.getSelectedCountryName().toString();
                 if(url.contains("UAE")){
                     url = "UAE";
-                    Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
                 }
                 if(url.equals("United States")){
                     url = "USA";
-                    Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
                 } if(url.equals("United Kingdom")){
                     url = "UK";
-                    Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
                 }
                 fetchData data = new fetchData(url);
                 data.execute();
