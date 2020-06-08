@@ -22,7 +22,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true">
 
         <ImageView
             android:id="@+id/imageView10"
@@ -30,11 +32,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/SearchCountry"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="-12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="-10dp"
+            android:layout_marginLeft="-10dp"
             android:layout_marginTop="11dp"
-            android:layout_marginEnd="18dp"
-            app:srcCompat="@drawable/group_381" />
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/group_381"
+            tools:ignore="UnknownId" />
 
         <TextView
             android:id="@+id/infectedText3"
@@ -42,8 +50,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/infectedID"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="18dp"
-            android:layout_marginEnd="70dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:gravity="center"
             android:text="Recovered"
             android:textSize="10dp" />
 
@@ -53,7 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/infectedID"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
             android:layout_marginTop="18dp"
             android:text="Today's Infected"
             android:textSize="10dp" />
@@ -64,24 +77,33 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/infectedID"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="18dp"
-            android:layout_marginEnd="172dp"
+            android:layout_marginEnd="167dp"
+            android:layout_marginRight="167dp"
+            android:gravity="center"
             android:text="Today's Death"
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/infectedID"
-            android:layout_width="wrap_content"
+            android:id="@+id/RecoveryID"
+            android:layout_width="91dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="72dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="261dp"
+            android:layout_marginLeft="261dp"
             android:layout_marginTop="127dp"
-            android:layout_marginEnd="246dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginRight="57dp"
             android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:lineSpacingExtra="20dp"
             android:text="0"
-            android:textColor="#ff8748"
+            android:textColor="#36c12c"
             android:textSize="14dp" />
 
         <TextView
@@ -90,30 +112,39 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="193dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="153dp"
+            android:layout_marginLeft="153dp"
             android:layout_marginTop="127dp"
-            android:layout_marginEnd="133dp"
+            android:layout_marginEnd="173dp"
+            android:layout_marginRight="173dp"
             android:fontFamily="sans-serif"
+            android:gravity="center"
             android:lineSpacingExtra="20dp"
             android:text="0"
             android:textColor="#ff4848"
             android:textSize="14dp" />
 
         <TextView
-            android:id="@+id/RecoveryID"
-            android:layout_width="91dp"
+            android:id="@+id/infectedID"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="301dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
             android:layout_marginTop="127dp"
-            android:layout_marginEnd="17dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginRight="286dp"
             android:fontFamily="sans-serif"
-            android:lineSpacingExtra="20dp"
+            android:gravity="center"
             android:text="0"
-            android:textColor="#36c12c"
+            android:textColor="#ff8748"
             android:textSize="14dp" />
 
         <ImageView
@@ -126,7 +157,9 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="-40dp"
             android:layout_marginEnd="0dp"
-            app:srcCompat="@drawable/image_1" />
+            app:srcCompat="@drawable/image_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -140,7 +173,11 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="28dp"
             android:layout_marginBottom="180dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="297dp"
+            android:layout_marginRight="28dp" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -154,7 +191,11 @@
             android:layout_marginTop="88dp"
             android:layout_marginEnd="112dp"
             android:layout_marginBottom="104dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="213dp"
+            android:layout_marginRight="112dp" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -168,7 +209,11 @@
             android:layout_marginTop="175dp"
             android:layout_marginEnd="349dp"
             android:layout_marginBottom="39dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="349dp" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -182,7 +227,11 @@
             android:layout_marginTop="38dp"
             android:layout_marginEnd="218dp"
             android:layout_marginBottom="162dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="114dp"
+            android:layout_marginRight="218dp" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -196,7 +245,11 @@
             android:layout_marginTop="119dp"
             android:layout_marginEnd="204dp"
             android:layout_marginBottom="81dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="128dp"
+            android:layout_marginRight="204dp" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -210,7 +263,11 @@
             android:layout_marginTop="195dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="19dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="257dp"
+            android:layout_marginRight="100dp" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -224,7 +281,11 @@
             android:layout_marginTop="34dp"
             android:layout_marginEnd="233dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/drcorona" />
+            app:srcCompat="@drawable/drcorona"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="58dp"
+            android:layout_marginRight="233dp" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -238,32 +299,36 @@
             android:layout_marginTop="59dp"
             android:layout_marginEnd="172dp"
             android:layout_marginBottom="133dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="153dp"
+            android:layout_marginRight="172dp" />
 
-        <EditText
-            android:id="@+id/SearchCountry"
-            android:layout_width="295dp"
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="43dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Country"
-            android:inputType="textPersonName" />
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="249dp"
-            android:layout_marginEnd="12dp"
-            android:background="#FAFAFAFA"
-            android:onClick="onClick"
-            app:srcCompat="@drawable/icons8_search_64" />
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp"
+            android:inputType="textPersonName"
+            app:ccp_showFullName="true"
+            app:ccp_defaultNameCode="BD"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="false"
+            app:ccp_textGravity="CENTER" />
+
+
+
 
         <ImageView
             android:id="@+id/imageView11"
@@ -273,7 +338,9 @@
             android:layout_marginTop="31dp"
             android:layout_marginEnd="313dp"
             android:layout_marginBottom="161dp"
-            app:srcCompat="@drawable/corona_1" />
+            app:srcCompat="@drawable/corona_1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="313dp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -282,7 +349,9 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="23dp"
             android:layout_marginEnd="-2dp"
-            android:layout_marginBottom="-1dp">
+            android:layout_marginBottom="-1dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -515,7 +584,11 @@
             android:textColor="#F0000000"
             android:textSize="26dp"
             android:textStyle="bold"
-            tools:ignore="UnknownId" />
+            tools:ignore="UnknownId"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="69dp"
+            android:layout_marginRight="72dp" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -527,7 +600,9 @@
             android:layout_marginEnd="30dp"
             android:background="#E53935"
             android:onClick="callNumber"
-            app:srcCompat="@drawable/ic_phone_in_talk_black_24dp" />
+            app:srcCompat="@drawable/ic_phone_in_talk_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -538,7 +613,9 @@
             android:layout_marginTop="217dp"
             android:layout_marginEnd="20dp"
             android:text="Call Hotline"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
 
     </RelativeLayout>
 </RelativeLayout>
