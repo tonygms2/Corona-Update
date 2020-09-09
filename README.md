@@ -4,6 +4,6 @@ Used https://github.com/javieraviles/covidAPI api to get the real time data of t
 Used part of the UI from UpLabs. Part of designs by Rendi Ramadana
 Demo Below: 
 
-![demo3](https://user-images.githubusercontent.com/15386922/82758919-50769900-9e0b-11ea-8443-8f12070bc1cf.gif)
+![demo3](https://github.com/tonygms2/Corona-Update/blob/master/gifmaker_20200909050835.gif)
 
 
